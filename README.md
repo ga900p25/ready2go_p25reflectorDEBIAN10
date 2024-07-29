@@ -17,7 +17,8 @@ The binary file 'P25Reflector' was replaced 28July2024 and retested on a DEBIAN 
 9. Check it and make sure it's operating correctly.  Connect to it with a p25gateway from a spot or repeater, use ps -ax, 
 or netstat -unap and/or systemctl status p25reflector to confirm it is running normally.
 Example:
-# systemctl status p25reflector
+At the command prompt use this command in the next line.
+systemctl status p25reflector
 ● p25reflector.service - P25 Reflector Service
    Loaded: loaded (/lib/systemd/system/p25reflector.service; disabled; vendor preset: enabled)
    Active: active (running) since Mon 2024-07-29 14:36:52 EDT; 14s ago
