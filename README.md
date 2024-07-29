@@ -1,5 +1,7 @@
 This is ready2go and tested on a DEBIAN10 machine.  27June2024
-The binary file 'P25Reflector' was replaced 28July2024 and retested on a DEBIAN 10 VPS. 
+The binary file 'P25Reflector' was replaced 28July2024 and retested on a DEBIAN 10 VPS ONLY. 
+These instructions assume you are familiar with DEBIAN10.  If this does not work for you, then you should compile the source code using the script I prepared or obtain directly from the nostar github: https://github.com/nostar/DVReflectors/tree/main/P25Reflector. 
+
 1. Create /opt/P25Reflector.
 
 2. Create /var/log/mmdvm
@@ -16,6 +18,7 @@ The binary file 'P25Reflector' was replaced 28July2024 and retested on a DEBIAN 
 
 9. Check it and make sure it's operating correctly.  Connect to it with a p25gateway from a spot or repeater, use ps -ax, 
 or netstat -unap and/or systemctl status p25reflector to confirm it is running normally.
+
 Example:
 At the command prompt use this command in the next line.
 systemctl status p25reflector
@@ -28,11 +31,10 @@ systemctl status p25reflector
    Memory: 604.0K
    CGroup: /system.slice/p25reflector.service
            └─6719 /opt/P25Reflector/P25Reflector /opt/P25Reflector/P25Reflector.ini
-
 Jul 29 14:36:52 'servername' systemd[1]: Starting P25 Reflector Service...
 Jul 29 14:36:52 'servername' systemd[1]: Started P25 Reflector Service.
 NOTE: The service is running manually but disabled and will not yet run automatically. 
 
-11. Assuming it is operating, let us enable the service so it starts automatically in future; systemctl enable p25reflector
+10. Assuming it is operating, let us enable the service so it starts automatically in future; systemctl enable p25reflector
 
 Use at your own risk.  Good luck, W4NOC
