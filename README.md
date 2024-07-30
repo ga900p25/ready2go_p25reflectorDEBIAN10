@@ -10,13 +10,13 @@ These instructions assume you are familiar with DEBIAN10.  If this does not work
 
 4. The file /opt/P25Reflector/P25Reflector is the binary. Use this command to make it executable: chmod +x /opt/P25Reflector/P25Reflector
 
-6. Place p25reflector.service in /lib/systemd/system
+5. Place p25reflector.service in /lib/systemd/system
 
-7. Edit /opt/P25Reflector/P25Reflector port= as required.  UDP41000 is normally correct. 
+6. Edit /opt/P25Reflector/P25Reflector port= as required.  UDP41000 is normally correct. 
 
-8. Start the service: systemctl start p25reflector
+7. Start the service: systemctl start p25reflector
 
-9. Check it and make sure it's operating correctly.  Connect to it with a p25gateway from a spot or repeater, use ps -ax, 
+8. Check it and make sure it's operating correctly.  Connect to it with a p25gateway from a spot or repeater, use ps -ax, 
 or netstat -unap and/or systemctl status p25reflector to confirm it is running normally.
 
 Example:
@@ -35,6 +35,6 @@ Jul 29 14:36:52 'servername' systemd[1]: Starting P25 Reflector Service...
 Jul 29 14:36:52 'servername' systemd[1]: Started P25 Reflector Service.
 NOTE: The service is running manually but disabled and will not yet run automatically. 
 
-10. Assuming it is operating, let us enable the service so it starts automatically in future; systemctl enable p25reflector
+9. Assuming it is operating, let us enable the service so it starts automatically in future; systemctl enable p25reflector
 
 Use at your own risk.  Good luck, W4NOC
