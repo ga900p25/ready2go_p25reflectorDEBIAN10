@@ -11,7 +11,7 @@ These instructions assume you are familiar with DEBIAN10.  If this does not work
 4. The file /opt/P25Reflector/P25Reflector is the binary. Use this command to make it executable: chmod +x /opt/P25Reflector/P25Reflector
 
 5. Place p25reflector.service in /lib/systemd/system
-
+NOTE: If you are not running netcheck, comment (#) lines 6, 7.
 6. Edit /opt/P25Reflector/P25Reflector port= as required.  UDP41000 is normally correct. 
 
 7. Start the service: systemctl start p25reflector
@@ -22,7 +22,7 @@ or netstat -unap and/or systemctl status p25reflector to confirm it is running n
 Example:
 At the command prompt use this command in the next line.
 systemctl status p25reflector
-● p25reflector.service - P25 Reflector Service
+p25reflector.service - P25 Reflector Service
    Loaded: loaded (/lib/systemd/system/p25reflector.service; disabled; vendor preset: enabled)
    Active: active (running) since Mon 2024-07-29 14:36:52 EDT; 14s ago
   Process: 6716 ExecStartPre=/bin/sh -c echo "Starting P25Reflector: [`date +%T.%3N`]" >> /var/log/netcheck (code=exite
@@ -33,8 +33,9 @@ systemctl status p25reflector
            └─6719 /opt/P25Reflector/P25Reflector /opt/P25Reflector/P25Reflector.ini
 Jul 29 14:36:52 'servername' systemd[1]: Starting P25 Reflector Service...
 Jul 29 14:36:52 'servername' systemd[1]: Started P25 Reflector Service.
-NOTE: The service is running manually but disabled and will not yet run automatically. 
+NOTE: The service is running manually. It will not yet run automatically. 
 
-9. Assuming it is operating, let us enable the service so it starts automatically in future; systemctl enable p25reflector
+9. Assuming it is operating, 'enable' the service so it starts automatically in future; systemctl enable p25reflector
 
+This did not work with DEBIAN12.  
 Use at your own risk.  Good luck, W4NOC
