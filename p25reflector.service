@@ -1,7 +1,6 @@
 [Unit]
 Description=P25 Reflector Service
 # Description=Place this file in /lib/systemd/system
-# Description=N4IRS 01/21/2022
 # Comment the next 2 lines if you are not using netcheck.
 After=netcheck.service
 Requires=netcheck.service
